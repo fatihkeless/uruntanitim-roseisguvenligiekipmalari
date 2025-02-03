@@ -1,0 +1,234 @@
+/* iletisim.module.css */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 2rem;
+  min-height: 100vh;
+}
+
+
+.loadingOverlay {
+  /* background-color: #6B6B6B; */
+  display: flex;
+  justify-content: center; /* Loader'ı yatay olarak ortala */
+  align-items: center; /* Loader'ı dikey olarak ortala */
+  min-height: 100vh;
+}
+
+ .siteMap{
+   height: 1rem;
+   display: flex;
+   align-items: center; /* Dikey hizalama */
+   gap: 0.5rem; /* Öğeler arasındaki boşluk */
+   flex-wrap: wrap; /* Öğelerin gerektiğinde alt satıra geçmesini sağlar */
+ }
+ 
+ .mapText {
+   font-size: 0.8rem;
+   font-weight: 500;
+   text-decoration: none; /* Linklerin alt çizgisini kaldırır */
+   color: #333333;
+   white-space: normal; /* Metnin gerektiğinde satırlara kırılmasına izin verir */
+   word-wrap: break-word; /* Uzun kelimelerin alt satıra geçmesini sağlar */
+   line-height: 1.3;
+ 
+ }
+ 
+ .activeText {
+   font-size: 0.8rem; /* Daha büyük boyut */
+   font-weight: 700; /* Daha kalın font */
+   color: rgb(29,29,31); /* Vurgulu renk */
+   line-height: 1.3; /* Satır arası boşluk artırılır */
+   word-wrap: break-word; /* Uzun kelimelerin alt satıra geçmesini sağlar */
+   white-space: normal; /* Bu, metnin gerektiğinde satırları kırmasına izin verir */
+   margin: 0;
+ }
+ 
+ .mapText:hover {
+   color: rgb(29,29,31); /* Hover rengini vurgulu yap */
+ }
+ 
+ .icon {
+   font-size: 0.8rem; /* Slash veya ikon boyutu */
+   color: #333333; /* Daha yumuşak bir renk */
+ }
+ 
+ 
+ .baslikContainer{
+   margin-top: 2rem;
+   margin-bottom: 2rem;
+ }
+ 
+ .baslikContainer h1 {
+   margin: 0;
+   font-size: 1.5rem;
+ }
+
+
+
+ .altContainer{
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+ }
+
+ .infoContainer{
+  width: calc(50% - 1rem/2);
+  background-color:#E0E0E0 ;
+  border-radius: 1rem;
+  padding: 1rem;
+ }
+
+ .infoContainer h2 {
+  margin: 0;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.infoContainer p {
+  margin: 0;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+ .haritaContainer{
+  display: flex;
+  justify-content: center;
+  width: calc(50% - 1rem/2);
+ }
+
+ .haritaContainer iframe {
+  border-radius: 1rem;
+  margin: 0;
+  width: 100%;
+  min-height: 25rem;
+  }
+
+
+
+
+
+  .socialMedia {
+      display: flex;
+      gap: 2rem; /* İkonlar arasındaki boşluğu ayarlayın */
+      justify-content: left;
+  }
+  
+  .iconLink {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      color: rgb(29,29,31); /* İkonların rengini ayarlayın */
+  }
+  
+  .iconSosyal {
+      font-size: 2.5rem; /* İkon boyutunu ayarlayın */
+      transition: color 0.3s ease;
+  }
+  
+  .iconLink:hover .iconSosyal {
+      color: #1D64F2; /* İkonların üzerine gelindiğinde rengini değiştirin */
+  }
+
+
+
+@media (max-width: 767px) {
+  .container {
+      margin: 1rem 0.5rem;
+    
+  }
+
+  .siteMap {
+      gap: 0.2rem; /* Öğeler arasındaki boşluk */
+      height: 1rem;
+  }
+  
+  .mapText {
+        font-size: 0.75rem;
+        font-weight: 500;
+        line-height: 1.2;
+  }
+  
+  .icon {
+        font-size: 0.75rem; /* Slash veya ikon boyutu */
+  }
+  
+  .activeText {
+        font-size: 0.75rem; /* Daha büyük boyut */
+        font-weight: 700;
+        line-height: 1.2;
+  }
+  
+  .baslikContainer{
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+  }
+  
+  .baslikContainer h1 {
+      margin: 0;
+      font-size: 1.3rem
+  }
+
+
+
+
+  .altContainer{
+      display: flex;
+      gap: 1rem;
+      width: 100%;
+      flex-direction: column;
+     }
+  
+     .infoContainer{
+      width: 100%;
+      border-radius: 0.5rem;
+      padding: 1rem;
+     }
+  
+     .infoContainer h2 {
+      margin: 0;
+      font-size: 1.15rem;
+      margin-bottom: 0.9rem;
+    }
+  
+    .infoContainer p {
+      margin: 0;
+      font-size: 0.9rem;
+      margin-bottom: 0.9rem;
+    }
+  
+     .haritaContainer{
+      width:100%;
+     }
+  
+     .haritaContainer iframe {
+      border-radius: 0.5rem;
+      }
+
+
+  /* styles.module.css */
+  .socialMedia {
+      gap: 1rem; /* İkonlar arasındaki boşluğu ayarlayın */
+  }
+    
+
+  .iconSosyal {
+  font-size: 2rem; /* İkon boyutunu ayarlayın */
+  }
+}
+
+
+@media (max-width: 1024px) {
+
+/* styles.module.css */
+.socialMedia {
+  gap: 1rem; /* İkonlar arasındaki boşluğu ayarlayın */
+}
+
+
+.iconSosyal {
+font-size: 2rem; /* İkon boyutunu ayarlayın */
+}
+}

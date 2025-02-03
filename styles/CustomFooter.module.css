@@ -1,0 +1,210 @@
+.customFooter {
+  background-color: rgb(29,29,31);
+  color: #f5f5f5;
+  padding: 2.5% 0;
+  width: 100%;
+}
+
+.footerContent {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  min-width: 0;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.footerSection {
+  flex: 1;
+  margin: 30px 15px;
+  padding: 0 15px;
+  min-width: 180px;
+}
+
+.rightCizgi {
+  border-right: 2px solid #444;
+}
+
+.footerSection:first-child {
+  border-left: none;
+}
+
+.footerSection h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.footerSection p,
+.footerSection a {
+  line-height: 1.8;
+  font-size: 16px;
+}
+
+.footerSection ul {
+  padding-left: 15px;
+}
+
+.footerSection a {
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footerSection a:hover {
+  color: #1D64F2;
+  text-decoration: underline;
+}
+
+.footerBottom {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 16px;
+}
+
+.socialIcons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5%;
+}
+
+.iconLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: inherit; /* İkonların rengini ayarlayın */
+}
+
+.icon {
+  font-size: 2em; /* İkon boyutunu ayarlayın */
+  transition: color 0.3s ease;
+  margin-bottom: 1rem;
+}
+
+.iconLink:hover .icon {
+  color: #1D64F2; /* İkonların üzerine gelindiğinde rengini değiştirin */
+}
+
+
+@media (max-width: 1200px) {
+  .footerSection h3 {
+    font-size: 22px;
+  }
+
+  .footerSection p,
+  .footerSection a {
+    font-size: 15px;
+  }
+
+  .footerBottom {
+    font-size: 15px;
+  }
+
+  .socialIcons img {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 992px) {
+  .footerSection h3 {
+    font-size: 20px;
+  }
+
+  .footerSection p,
+  .footerSection a {
+    font-size: 14px;
+  }
+
+  .footerBottom {
+    font-size: 14px;
+  }
+
+  .socialIcons img {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+@media (max-width: 768px) {
+  .customFooter {
+    padding: 2.5% 0 ;
+  }
+
+  .footerContent {
+    flex-direction: column;
+    align-items: center;
+    padding-left: 0;
+  }
+
+  .footerSection {
+    width: 100%;
+    text-align: center;
+    padding-left: 0;
+    margin-bottom: 0;
+    
+  }
+
+  .footerSection h3 {
+    font-size: 18px;
+  }
+
+  .footerSection p,
+  .footerSection a {
+    font-size: 13px;
+  }
+
+  .footerBottom {
+    font-size: 13px;
+  }
+
+  .socialIcons {
+    justify-content: center;
+  }
+
+  .socialIcons img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .footerSection ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+
+  .footerSection ul li {
+    margin-bottom: 10px;
+  }
+
+  .rightCizgi {
+    border-right: none;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1350px) {
+  .footerSection {
+    flex: 1 1 200px;
+  }
+
+  .footerSection h3 {
+    font-size: 18px;
+  }
+
+  .footerSection p,
+  .footerSection a {
+    font-size: 14px;
+  }
+
+  .footerBottom {
+    font-size: 14px;
+  }
+
+  .socialIcons a {
+    margin-right: 10px;
+  }
+
+  .socialIcons img {
+    width: 30px;
+    height: 30px;
+  }
+}
+

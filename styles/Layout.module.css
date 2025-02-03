@@ -1,0 +1,37 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .contentWrapper {
+    flex: 1;
+  }
+  
+  .pageContainer,
+  .panelContainer {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .pageContent,
+  .panelContent {
+    flex: 1;
+    margin-top: 4rem;
+  }
+
+
+  .altBar {
+    display: none;
+  }
+  
+  @media (max-width: 767px) {
+    .altBar {
+      display: block;
+    }
+    .pageContent,
+    .panelContent {
+      margin-top: 3.5rem;
+    }
+  
+  }

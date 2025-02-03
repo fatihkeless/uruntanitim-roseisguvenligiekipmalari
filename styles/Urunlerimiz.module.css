@@ -1,0 +1,365 @@
+/* General Styles */
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 2rem;
+  min-height: 100vh;
+}
+
+
+.loadingOverlay {
+  /* background-color: #6B6B6B; */
+  display: flex;
+  justify-content: center; /* Loader'ı yatay olarak ortala */
+  align-items: center; /* Loader'ı dikey olarak ortala */
+  min-height: 100vh;
+}
+
+.contextContainerAlternative {
+  display: flex;
+  justify-content: center; /* Loader'ı yatay olarak ortala */
+  align-items: center; /* Loader'ı dikey olarak ortala */
+  min-height: 50vh;
+}
+
+.siteMap{
+  height: 1rem;
+  display: flex;
+  align-items: center; /* Dikey hizalama */
+  gap: 0.5rem; /* Öğeler arasındaki boşluk */
+  flex-wrap: wrap; /* Öğelerin gerektiğinde alt satıra geçmesini sağlar */
+}
+
+.mapText {
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-decoration: none; /* Linklerin alt çizgisini kaldırır */
+  color: #333333;
+  white-space: normal; /* Metnin gerektiğinde satırlara kırılmasına izin verir */
+  word-wrap: break-word; /* Uzun kelimelerin alt satıra geçmesini sağlar */
+  line-height: 1.3;
+
+}
+
+.activeText {
+  font-size: 0.8rem; /* Daha büyük boyut */
+  font-weight: 700; /* Daha kalın font */
+  color: rgb(29,29,31); /* Vurgulu renk */
+  line-height: 1.3; /* Satır arası boşluk artırılır */
+  word-wrap: break-word; /* Uzun kelimelerin alt satıra geçmesini sağlar */
+  white-space: normal; /* Bu, metnin gerektiğinde satırları kırmasına izin verir */
+  margin: 0;
+}
+
+.mapText:hover {
+  color: rgb(29,29,31); /* Hover rengini vurgulu yap */
+}
+
+.icon {
+  font-size: 0.8rem; /* Slash veya ikon boyutu */
+  color: #333333; /* Daha yumuşak bir renk */
+}
+
+
+.baslikContainer{
+  margin-top: 2rem;
+}
+
+.baslikContainer h1 {
+  margin: 0;
+  font-size: 1.5rem;
+
+}
+
+
+.categoryContainer{
+  margin-top: 2rem;
+  height: 2.5rem;
+  display: flex;
+
+}
+
+.scrollContainer{
+  display: flex;
+  height: 100%;
+  align-items: center;
+  gap: 1rem;
+
+  overflow-x: auto;
+  white-space: nowrap;
+  scrollbar-width: none;
+}
+
+.ItemContainer{
+  display: flex;
+  align-items: center;
+  background-color: #E0E0E0;
+  height: 2.5rem;
+  border-radius: 0.5rem;
+  padding: 0 1rem;
+  cursor: pointer;
+}
+
+.ItemContainer p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+
+.ItemContainer:hover{
+  background-color: #BDBDBD;
+}
+
+
+.ItemActiveContainer {
+  display: flex;
+  align-items: center;
+  background-color: rgb(29,29,31);
+  height: 2.5rem;
+  border-radius: 0.5rem;
+  padding: 0 1rem;
+}
+
+.ItemActiveContainer p {
+  margin: 0;
+  font-size: 1rem;
+  color: #fff;
+}
+
+
+
+
+.directionContainer {
+  height: 2rem;
+  margin-top: 2rem;
+
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end; /* Tüm butonları sağa hizalar */
+}
+
+.buttonLeft,
+.buttonRight {
+  padding: 0 1rem; /* Yatayda genişliği artırır */
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #E0E0E0; /* Varsayılan arka plan rengi */
+  border: 1px solid #ccc; /* İnce bir kenarlık */
+  cursor: pointer; /* İmleci el yapar */
+  transition: background-color 0.3s, color 0.3s, transform 0.3s; /* Yumuşak geçişler */
+}
+
+.buttonLeft:hover,
+.buttonRight:hover {
+  background-color: rgb(29,29,31); /* Hover sırasında renk değişimi */
+  color: white; /* Yazı rengini beyaz yap */
+  transform: scale(1.05); /* Buton hafifçe büyür */
+  border-color: rgb(29,29,31); /* Kenarlık rengini değiştir */
+}
+
+.disabled {
+  background-color: #f5f5f5; /* Devre dışı arka plan rengi */
+  color: #aaa; /* Devre dışı yazı rengi */
+  border-color: #ddd; /* Devre dışı kenarlık rengi */
+  cursor: not-allowed; /* İmleci engelli duruma getirir */
+  transform: none; /* Hover efekti iptal */
+  pointer-events: none; /* Tüm tıklanabilir olayları iptal eder */
+}
+
+/* Kırmızı ikonun engellenmesi için */
+.disabled::before,
+.disabled::after {
+  content: none; /* Pseudo elementlerin içeriğini tamamen kaldırır */
+}
+
+.buttonLeft:disabled:hover,
+.buttonRight:disabled:hover {
+  background-color: #f5f5f5; /* Hover'da renk değişimi olmamalı */
+  color: #aaa; /* Hover'da yazı rengi değişimi olmamalı */
+  border-color: #ddd; /* Kenarlık rengi sabit kalır */
+  cursor: not-allowed; /* İmleci engelli duruma getirir */
+}
+
+.directionIcon{
+  font-size: 1rem;
+}
+
+
+.altContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1; /* This makes altContainer take the remaining space */
+}
+
+.contextContainerAlternative {
+  display: flex;
+  justify-content: center; /* Loader'ı yatay olarak ortala */
+  align-items: center; /* Loader'ı dikey olarak ortala */
+  flex: 1;
+}
+
+
+
+.productContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 1rem;
+  margin-top: 2rem;
+
+}
+
+/* Individual product items */
+.productItem {
+  background-color: #fff;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: calc(25% - 3rem/4);  /* Starting with 4 cards in large screens */
+  margin-bottom: 1rem;
+}
+
+
+.productItemImage {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 8 / 12;
+}
+
+/*  aspect-ratio: 8 / 12;  */
+
+
+/* Title styling for items with ellipsis for overflow */
+.productItemTitle {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+
+/* Price styling with bold text */
+.productItemPrice {
+  font-weight: bold;
+  margin-top: auto;
+  width: 100%;
+  text-align: left;
+}
+
+
+
+.icerikYok{
+  font-size: 1.3rem;
+  text-align: start;
+  margin-top: 2rem;
+ }
+
+ .paginationContainer{
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+ }
+
+
+
+@media screen and (max-width: 767px) {
+
+
+  .container {
+    margin: 1rem 0.5rem;
+  
+  }
+
+
+  .siteMap {
+    gap: 0.2rem; /* Öğeler arasındaki boşluk */
+    height: 1rem;
+  }
+
+  .mapText {
+      font-size: 0.75rem;
+      font-weight: 500;
+      line-height: 1.2;
+  }
+
+  .icon {
+      font-size: 0.75rem; /* Slash veya ikon boyutu */
+  }
+
+  .activeText {
+      font-size: 0.75rem; /* Daha büyük boyut */
+      font-weight: 700;
+      line-height: 1.2;
+  }
+
+  .baslikContainer{
+    margin-top: 1rem;
+  }
+
+  .baslikContainer h1 {
+    margin: 0;
+    font-size: 1.3rem
+  }
+
+  .categoryContainer{
+    margin-top: 1rem;
+    height: 2rem;
+  }
+
+  .scrollContainer{
+    gap: 0.5rem;
+  }
+  
+  .ItemContainer{
+    display: flex;
+    align-items: center;
+    border-radius: 0.25rem;
+    padding: 0 1rem;
+    background-color: #E0E0E0;
+    height: 2rem;
+  }
+
+  .ItemActiveContainer {
+    height: 2rem;
+    border-radius: 0.25rem;
+  }
+  
+  .ItemContainer p {
+    font-size: 0.9rem;
+  }
+
+  .ItemActiveContainer p {
+    font-size: 0.9rem;
+  }
+
+  .directionContainer{
+    display: none;
+  }
+
+  .productContainer {
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+
+  .productItem {
+    width: calc(50% - 0.5rem/2); /* 2 cards per row with 1.5rem padding removed */
+    margin-bottom: 0.5rem;
+  }
+
+  .icerikYok{
+    font-size: 1rem;
+    margin-top: 1rem;
+  }
+
+  .paginationContainer{
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+   }
+}

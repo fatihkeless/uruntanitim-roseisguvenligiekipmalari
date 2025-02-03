@@ -1,0 +1,186 @@
+.showcaseContainer {
+  margin-bottom: 2rem;
+  margin: 1rem 2%;
+}
+
+
+.horizontalContainer {
+  margin-top: 0;
+  display: flex;
+  flex-direction: row;
+  overflow: h;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  gap: 1rem;
+  position: relative;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.horizontalCLick{
+  cursor: pointer;
+}
+
+
+.horizontalContainerFullWidth{
+  margin-top: 0;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.fullWidht {
+  gap: 1rem;
+  display: flex;
+  justify-content: center; /* Elemanlar arasında eşit boşluk bırakır */
+  
+}
+
+
+.scrollable {
+  overflow-x: auto; 
+  gap: 1rem;
+  display: flex;
+  border-bottom: 1px solid #ddd;
+}
+
+.scrollable::-webkit-scrollbar {
+  display: none; /* Kaydırma çubuğunu tamamen kaldır */
+}
+
+.kategoriItemTitle {
+  display: inline-block;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  color: #666;
+  cursor: pointer;
+  white-space: nowrap; /* Prevent text from wrapping to the next line */
+}
+
+
+
+.productContainer{
+  min-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+
+/* Individual product items */
+.productItem {
+  background-color: #fff;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: calc(33.33%);  /* Starting with 4 cards in large screens */
+}
+
+
+.productItemImage {
+  aspect-ratio: 8 / 12; 
+  width: 100%; 
+  height: auto;
+  
+}
+
+
+/* Title styling for items with ellipsis for overflow */
+.productItemTitle {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+
+/* Price styling with bold text */
+.productItemPrice {
+  font-weight: bold;
+  color: black;
+  margin-top: auto;
+  width: 100%;
+  text-align: left;
+}
+
+.customPrevArrow, .customNextArrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 50;
+  cursor: pointer;
+  background-color: black;
+  color: #fff;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1rem;
+}
+
+.customPrevArrow {
+  left: 1.5rem;
+}
+
+.customNextArrow {
+  right: 1.5rem;
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+@media (max-width: 767px) {
+
+  .showcaseContainer {
+    margin-bottom: 1rem;
+  }
+
+  .horizontalContainer {
+    margin-left: 0.5rem;
+    margin-right: 1rem;
+  }
+
+
+  .horizontalContainerFullWidth{
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+
+  .productContainer{
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
+  }
+
+  .productItem {
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+  }
+
+
+  .productItemTitle, .productItemPrice {
+    font-size: 0.9rem;
+  }
+  .kategoriItemTitle{
+    font-size: 0.9rem;
+  }
+
+}
+
+
+
+
