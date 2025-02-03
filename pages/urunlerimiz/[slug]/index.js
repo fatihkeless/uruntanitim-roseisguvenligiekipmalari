@@ -123,7 +123,9 @@ const UrunDetay = ({ product, relatedProducts, error }) => {
 
             {/* {product.fiyat && <p className={styles.detailPrice}>{product.fiyat}</p>} */}
 
-            <div className={styles.smallBaslik}>Özellik:</div>
+            {product.ozellikler && product.ozellikler.length > 0 && (
+              <>
+            <div className={styles.smallBaslik}>Özellik:</div> 
 
             <div className={styles.ozellikContainer}>
               {product.ozellikler.map((item, index) => (
@@ -132,16 +134,21 @@ const UrunDetay = ({ product, relatedProducts, error }) => {
                 </span>
               ))}
             </div>
+            </>
+            )}
 
-            <div className={styles.smallBaslik}>Beden:</div>
-
-            <div className={styles.boxContainer}>
-              {product.bedenler.map(size => (
-                <span key={size.id} className={styles.box}>
-                  {size.numara}
-                </span>
-              ))}
-            </div>
+            {product.bedenler && product.bedenler.length > 0 && (
+              <>
+                <div className={styles.smallBaslik}>Numara:</div>
+                <div className={styles.boxContainer}>
+                  {product.bedenler.map(size => (
+                    <span key={size.id} className={styles.box}>
+                      {size.numara}
+                    </span>
+                  ))}
+                </div>
+              </>
+            )}
 
             {product.aciklama && (
               <div
