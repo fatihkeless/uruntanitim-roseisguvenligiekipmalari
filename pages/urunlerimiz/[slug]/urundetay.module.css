@@ -875,3 +875,22 @@ text-align: center;
 .whatsappLink:hover {
 background-color: #61d48c; /* Darker green on hover */
 }
+
+.customDots {
+  bottom: 20px !important; /* Dots'ların konumunu ayarlayın */
+}
+
+.customDots li button:before {
+  font-size: 12px !important;
+  color: #330f0f !important; /* Pasif dots rengi */
+}
+
+.customDots li.slick-active button:before {
+  color: #000000 !important; /* Aktif dot rengi - istediğiniz renge değiştirebilirsiniz */
+}
+
+@media (max-width: 768px) {
+  .customDots {
+    bottom: 2em !important; /* Mobil görünümde dots konumu */
+  }
+}
