@@ -177,14 +177,14 @@ const NestedList = ({ children }) => {
   return (
     <>
       <Head>
-        <title>Flexsoft Panel</title>
+        <title>Rose Panel</title>
       </Head>
       <Box sx={{ display: 'flex' }}>
         <CssBaseline />
         <AppBar position="fixed" sx={{ width: '100%', ml: { sm: `${drawerWidth}px` }, backgroundColor: 're', boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)' }}>
           <Toolbar>
             <Typography variant="h6" noWrap component="div">
-            Flexsoft
+            Rose
             </Typography>
             <Box sx={{ flexGrow: 1 }} />
             <IconButton color="inherit" onClick={logout}>

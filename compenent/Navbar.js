@@ -49,7 +49,7 @@ const Navbar = () => {
 
     return (
         <div className={styles.navbarContainer}>
-            <Link href="/"><div className={styles.logoContainer}>FlexSoft</div></Link>
+            <Link href="/"><div className={styles.logoContainer}>Rose</div></Link>
 
             {isMobileState && !menuOpen && (
                 <div className={styles.hamburgerContainer} onClick={toggleMenu}>
@@ -63,7 +63,7 @@ const Navbar = () => {
                         <div className={styles.closeIconContainer}>
                             {activeMenu === null ? (
                                 <>
-                                    <div className={styles.logoContainer}>FlexSoft</div>
+                                    <div className={styles.logoContainer}>Rose</div>
                                     <div className={styles.hamburgerContainer} onClick={toggleMenu}>
                                         <FaTimes />
                                     </div>
