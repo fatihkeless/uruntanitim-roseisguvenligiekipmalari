@@ -93,8 +93,9 @@ const UrunDetay = ({ product, relatedProducts, error }) => {
   return (
     <div>
       <Head>
-        <title>Flexsoft | {product.baslik}</title>
-        <meta name="description" content="Flexsoft bir e-ticaret sitesidir ve yazılım hizmetleri vermektedir. Butik ve giyim mağazalarına yöneliktir." />
+        <title>{product.baslik} | Rose İş Güvenliği Ekipmanları</title>
+        <meta name="description" content="{product.baslik} ve diğer iş güvenliği ekipmanları Rose İş Güvenliği'nde!" />
+        <link rel="icon" href="/rose-logo-08.png" type="image/png" />
       </Head>
 
       <div className={styles.container}>

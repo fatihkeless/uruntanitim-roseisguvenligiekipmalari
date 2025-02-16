@@ -7,7 +7,8 @@ const Custom404 = () => {
   return (
     <>
       <Head>
-        <title>Sayfa Bulunamadı</title>
+        <title>Sayfa Bulunamadı | Rose İş Güvenliği Ekipmanları</title>
+        <link rel="icon" href="/rose-logo-08.png" type="image/png" />
       </Head>
       <div className={styles.container}>
         <h1 className={styles.title}>404 - Sayfa Bulunamadı</h1>

@@ -1,4 +1,0 @@
-fiyat ibareleri gözükmeyecek kullanıcı arayüzünda.
-wp buttonu gelecek.
-harita konumu simdilik olmayacak
-ÖZELLİKLERİN ÖZELLİKLERİ eklendi.

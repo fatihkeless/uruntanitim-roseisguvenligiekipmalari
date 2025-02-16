@@ -43,8 +43,8 @@ const Login = () => {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Admin Giriş | ASD</title>
-
+        <title>Admin Giriş | Rose İş Güvenliği Ekipmanları</title>
+        <link rel="icon" href="/rose-logo-08.png" type="image/png" />
       </Head>
       <div className={styles.login}>
         <h1 className={styles.title}>Giriş Yap</h1>

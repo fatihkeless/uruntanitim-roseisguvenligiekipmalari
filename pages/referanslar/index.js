@@ -42,8 +42,9 @@ const Referans = () => {
   return (
     <>
       <Head>
-          <title>Rose İş Güvenliği Ekipmanları | Referanslar</title>
+          <title>Referanslar | Rose İş Güvenliği Ekipmanları</title>
           <meta name="description" content="Rose İş Güvenliği Ekipmanları'nın güvenilir referansları ve sektördeki başarılı iş birlikleri hakkında bilgi alın." />
+          <link rel="icon" href="/rose-logo-08.png" type="image/png" />
       </Head>
 
         {isLoading ? (

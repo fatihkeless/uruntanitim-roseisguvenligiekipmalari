@@ -306,8 +306,9 @@ const fetchMedications = async (kategoriSlug,page) => {
   return (
       <>
         <Head>
-          <title>Rose İş Güvenliği Ekipmanları | Ürünlerimiz</title>
+          <title>Ürünlerimiz | Rose İş Güvenliği Ekipmanları</title>
           <meta name="description" content={`Rose İş Güvenliği Ekipmanları, geniş ürün yelpazesiyle hizmetinizde. Kategorilerimiz: ${kategoriBasliklari}.`} />
+          <link rel="icon" href="/rose-logo-08.png" type="image/png" />
         </Head>
 
 

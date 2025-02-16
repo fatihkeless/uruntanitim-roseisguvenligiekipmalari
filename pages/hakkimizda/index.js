@@ -16,8 +16,9 @@ const Hakkimizda = ({ content, data, error }) => {
   return (
     <>
       <Head>
-        <title>Rose İş Güvenliği Ekipmanları | Hakkımızda</title>
+        <title>Hakkımızda | Rose İş Güvenliği Ekipmanları</title>
         <meta name="description" content="Rose İş Güvenliği Ekipmanları hakkında detaylı bilgi edinin. İş güvenliği ekipmanları ve hizmetlerimizle ilgili her şey burada."/>
+        <link rel="icon" href="/rose-logo-08.png" type="image/png" />
       </Head>
 
       <div className={styles.container}>

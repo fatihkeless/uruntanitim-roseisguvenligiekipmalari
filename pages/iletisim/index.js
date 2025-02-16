@@ -93,8 +93,9 @@ const Iletisim = () => {
   return (
     <div>
       <Head>
-      <title>Rose İş Güvenliği Ekipmanları | İletişim</title>
-      <meta name="description" content="Rose İş Güvenliği Ekipmanları ile iletişime geçin. İletişim bilgilerimiz ve iletişim formu aracılığıyla bize kolayca ulaşabilirsiniz." />
+        <title>İletişim | Rose İş Güvenliği Ekipmanları</title>
+        <meta name="description" content="Rose İş Güvenliği Ekipmanları ile iletişime geçin. İletişim bilgilerimiz ve iletişim formu aracılığıyla bize kolayca ulaşabilirsiniz." />
+        <link rel="icon" href="/rose-logo-08.png" type="image/png" />
       </Head>
 
 
