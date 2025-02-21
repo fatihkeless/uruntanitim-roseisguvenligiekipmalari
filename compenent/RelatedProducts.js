@@ -66,9 +66,9 @@ const RelatedProducts = ({ products, currentProductId }) => {
               <Link href={`/urunlerimiz/${product.slug}`}>
                 <p className={stylesSlider.productItemTitle}>{product.baslik}</p>
               </Link>
-              <p className={stylesSlider.productItemPrice}>
-                {product.fiyat ? `${product.fiyat} TL` : ''}
-              </p>
+              // <p className={stylesSlider.productItemPrice}>
+              //   {product.fiyat ? `${product.fiyat} TL` : ''}
+              // </p>
             </div>
           ))}
       </Slider>
