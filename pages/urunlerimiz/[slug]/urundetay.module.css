@@ -469,7 +469,7 @@ transition: background-color 0.3s;
 
 .slickprev, .slicknext {
   position: absolute;
-  z-index: 1000;
+  z-index: 999;
   display: flex;
   text-align: center;
   align-items: center;
@@ -495,7 +495,7 @@ transition: background-color 0.3s;
 }
 
 .slicknext {
-  bottom: 35px; /* Arrow konumunu ayarlayın */
+  bottom: 0; /* Arrow konumunu ayarlayın */
   left: 50%; /* Arrow konumunu ayarlayın */
   transform: translateX(-50%);
 }

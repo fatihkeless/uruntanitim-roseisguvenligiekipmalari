@@ -81,7 +81,7 @@ const ContainerıImage = ({getImage}) => {
         nextArrow: <NextArrow />,
         prevArrow: <PrevArrow />,
         slidesToShow: 4.5, // Aynı anda kaç öğe göstermek istediğinizi belirtin
-        adaptiveHeight: true,
+        adaptiveHeight: false,
         beforeChange: handleBeforeChange,
         afterChange: handleAfterChange,
         responsive: [
