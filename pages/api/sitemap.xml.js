@@ -38,22 +38,22 @@ export default async function SitemapXml(req, res) {
     const products = await fetchProducts();
 
     const staticPages = [
-      { url: 'https://flexsoft.com.tr', lastmod: new Date().toISOString(), changefreq: 'daily', priority: 1.0 },
-      { url: 'https://flexsoft.com.tr/urunlerimiz', lastmod: new Date().toISOString(), changefreq: 'daily', priority: 0.8 },
-      { url: 'https://flexsoft.com.tr/referanslar', lastmod: new Date().toISOString(), changefreq: 'monthly', priority: 0.6 },
-      { url: 'https://flexsoft.com.tr/hakkimizda', lastmod: new Date().toISOString(), changefreq: 'yearly', priority: 0.4 },
-      { url: 'https://flexsoft.com.tr/iletisim', lastmod: new Date().toISOString(), changefreq: 'yearly', priority: 0.4 },
+      { url: 'https://roseisguvenligiekipmanlari.com', lastmod: new Date().toISOString(), changefreq: 'daily', priority: 1.0 },
+      { url: 'https://roseisguvenligiekipmanlari.com/urunlerimiz', lastmod: new Date().toISOString(), changefreq: 'daily', priority: 0.8 },
+      { url: 'https://roseisguvenligiekipmanlari.com/referanslar', lastmod: new Date().toISOString(), changefreq: 'monthly', priority: 0.6 },
+      { url: 'https://roseisguvenligiekipmanlari.com/hakkimizda', lastmod: new Date().toISOString(), changefreq: 'yearly', priority: 0.4 },
+      { url: 'https://roseisguvenligiekipmanlari.com/iletisim', lastmod: new Date().toISOString(), changefreq: 'yearly', priority: 0.4 },
     ];
 
     const dynamicPages = categories.map(category => ({
-      url: `https://flexsoft.com.tr/urunlerimiz?tab=${category.slug}`,
+      url: `https://roseisguvenligiekipmanlari.com/urunlerimiz?tab=${category.slug}`,
       lastmod: new Date().toISOString(),
       changefreq: 'weekly',
       priority: 0.7,
     }));
 
     const productPages = products.map(product => ({
-      url: `https://flexsoft.com.tr/urunlerimiz?product=${product.slug}`,
+      url: `https://roseisguvenligiekipmanlari.com/urunlerimiz?product=${product.slug}`,
       lastmod: new Date().toISOString(),
       changefreq: 'weekly',
       priority: 0.7,

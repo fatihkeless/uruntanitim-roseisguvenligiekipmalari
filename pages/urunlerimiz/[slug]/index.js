@@ -10,6 +10,13 @@ import { FaWhatsapp } from "react-icons/fa";
 import RelatedProducts from '../../../compenent/RelatedProducts';
 import ContainerıImage from '../../../compenent/ContainerıImage';
 
+// Telefon numarasını temizleyen fonksiyon
+const cleanPhoneNumber = (phone) => {
+  if (!phone) return '';
+  // Boşlukları ve + işaretini kaldır
+  return phone.replace(/\s+/g, '').replace('+', '');
+};
+
 // Ürün detayını çeken fonksiyon
 export const getDataById = async (slug) => {
   try {
@@ -72,6 +79,25 @@ export async function getServerSideProps(context) {
 
 // Ana bileşen
 const UrunDetay = ({ product, relatedProducts, error }) => {
+  const [whatsappNumber, setWhatsappNumber] = React.useState('');
+
+  React.useEffect(() => {
+    const fetchContactInfo = async () => {
+      try {
+        const response = await axios.get(API_ROUTES.ILETISIM.replace("id/", ""));
+        const result = response.data.results[0];
+        if (result && result.phone1) {
+          const cleanedNumber = cleanPhoneNumber(result.phone1);
+          setWhatsappNumber(cleanedNumber);
+        }
+      } catch (error) {
+        console.error('İletişim bilgileri yüklenirken bir hata oluştu:', error);
+      }
+    };
+
+    fetchContactInfo();
+  }, []);
+
   if (error) {
     return (
       <div className={styles.errorContainer}>
@@ -159,7 +185,7 @@ const UrunDetay = ({ product, relatedProducts, error }) => {
             )}
 
             <a
-              href="https://wa.me/905355424680"
+              href={`https://wa.me/${whatsappNumber}`}
               target="_blank"
               rel="noopener noreferrer"
               className={styles.whatsappLink}
