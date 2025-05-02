@@ -53,7 +53,7 @@ export default async function SitemapXml(req, res) {
     }));
 
     const productPages = products.map(product => ({
-      url: `https://roseisguvenligiekipmanlari.com/urunlerimiz?product=${product.slug}`,
+      url: `https://roseisguvenligiekipmanlari.com/urunlerimiz/${product.slug}`,
       lastmod: new Date().toISOString(),
       changefreq: 'weekly',
       priority: 0.7,
